@@ -1,0 +1,282 @@
+body {
+    font-family: serif;
+    background-color: beige;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    -webkit-padding-start: 0px;
+    justify-content: flex-end;
+    font-weight: bold;
+    border-bottom: 1px solid tomato;
+}
+
+.nav a {
+    text-decoration: none;
+    color: tomato;
+    padding: 1.5em;
+}
+
+.nav a:hover, .number_center a:hover {
+    color: black;
+}
+
+.header-game {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-size: 2vw;
+    margin: auto;
+}
+
+button {
+    font-size: 2vw;
+    font-weight: bold;
+    color:tomato;
+    margin: 10px;
+}
+
+button a {
+    padding: 1.5em;
+}
+
+.flex-container {
+    padding: 0;
+    margin: auto;
+    list-style: none;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-item {
+    background: tomato;
+    padding: 5px;
+    margin: 5px;
+    width:15vw;
+    height:15vw;
+    max-width:150px;
+    max-height:150px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color:white;
+
+    border-width: thin;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 15px;
+}
+
+.number_center {
+    align-self: center;
+    font-size: 7vw;
+}
+
+.number_center a {
+    text-decoration: none;
+    color: white;
+}
+
+.color-turndown {
+    background-color: tomato;
+    color: tomato;
+    text-shadow: none;
+}
+
+.color-found {
+    background-color: orangered;
+    color: white;
+    text-shadow: 2px 2px grey;
+}
+
+#button-over {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modal-inner {
+    background-color: orange;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+
+    border-width: thin;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 15px;
+}
+
+#stars, .stars {
+    color:tomato;
+    padding: 1em;
+    margin:0;
+}
+
+
+.flex-game {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.border-around {
+    border-width: thin;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 15px;
+}
+.bordershadow{
+    border-width: thin;
+    border-style: solid;
+    width: 300px;
+    border-color: grey;
+    box-shadow: 10px 10px 5px grey;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+@media screen and (min-width: 1000px) {
+    .content {
+        width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .header-game {
+        width: 150px;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: auto;
+        order: 1;
+        margin-top: 0;
+    }
+    .flex-game {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+}
+@media screen and (min-width: 730px) and (max-width: 999px) {
+    .content {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flex-game {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .header-game {
+        width: 80%;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 729px) {
+    .content {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flex-game {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+    }
+    .header-game {
+        width: 80%;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flex-game {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+    }
+    .header-game {
+        width: 80%;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+
+    button {
+        font-size: 2em;
+    }
+    .nav ul {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+}
+
+
